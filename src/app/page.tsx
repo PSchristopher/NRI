@@ -858,16 +858,16 @@ const Page = () => {
         </div>
       </section>
       {/* {section 11} */}
-      <section className=" px-4 md:px-20 lg:px-40 mt-20  mb-40">
+      <section className=" px-4 md:px-20 lg:px-40 mt-40  mb-40">
         <div className="w-full bg-[#F2F8F2] px-4 rounded-[20px] py-10 relative overflow-hidden">
           <div className="absolute inset-0 z-0 w-[80%] mx-auto">
-            <Image
+            {/* <Image
               src="/assets/bg_circle.png"
               alt="Your Image Alt Text"
               layout="fill"
               objectFit="cover"
               objectPosition="center"
-            />
+            /> */}
           </div>
           <div className="w-[80%] lg:w-[70%] mx-auto relative z-10">
             <h1 className="text-gray-800 mx-auto  font-semibold text-center font-graphik leading-[50px]">
