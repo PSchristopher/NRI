@@ -10,6 +10,9 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      scale: {
+        '101': '1.02',
+      },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":

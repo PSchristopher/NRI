@@ -267,7 +267,7 @@ const Page = () => {
         <h1 className="text-gray-800 mx-auto  font-semibold font-graphik leading-[50px]">
           Product <span className="text-primary">We offer</span>
         </h1>
-        <div className="flex flex-wrap  gap-20 lg:gap-0  justify-between mt-8">
+        <div className="flex flex-wrap  gap-20 lg:gap-0  justify-between mt-8 h-full">
           <div className="w-full lg:w-[48%] flex flex-col gap-4">
             <div
               // className=`flex gap-10 w-full indexbg-[#F2F8F2] items-center px-8 py-4 rounded-lg drop-shadow-sm`
@@ -288,7 +288,7 @@ const Page = () => {
                 height={1}
               />
               <div className="">
-                <p className="  font-medium">Mutual Funds</p>
+                <p className=" font-semibold">Mutual Funds</p>
                 <p className="mt-2 font-light">
                   Diversified portfolio for long-term growth.
                 </p>
@@ -312,7 +312,7 @@ const Page = () => {
                 height={1}
               />
               <div className="">
-                <p className="  font-medium">Fixed Deposits</p>
+                <p className="   font-semibold">Fixed Deposits</p>
                 <p className="mt-2 font-light">
                   Diversified portfolio for long-term growth.
                 </p>
@@ -336,7 +336,7 @@ const Page = () => {
                 height={1}
               />
               <div className="">
-                <p className="  font-medium">Commercial Real Estate</p>
+                <p className="   font-semibold">Commercial Real Estate</p>
                 <p className="mt-2 font-light">
                   Diversified portfolio for long-term growth.
                 </p>
@@ -360,7 +360,7 @@ const Page = () => {
                 height={1}
               />
               <div className="">
-                <p className="  font-medium">PMS</p>
+                <p className="   font-semibold">PMS</p>
                 <p className="mt-2 font-light">
                   Diversified portfolio for long-term growth.
                 </p>
@@ -384,7 +384,7 @@ const Page = () => {
                 height={1}
               />
               <div className="">
-                <p className="  font-medium">Bond</p>
+                <p className="   font-semibold">Bond</p>
                 <p className="mt-2 font-light">
                   Diversified portfolio for long-term growth.
                 </p>
@@ -392,11 +392,11 @@ const Page = () => {
             </div>
           </div>
           <div className="w-full lg:w-[48%] bg-[#F2F8F2] px-2 rounded-[20px] py-2">
-            <div className="bg-white flex flex-col justify-between items-center rounded-[20px] pt-4 ">
+            <div className="bg-white flex flex-col justify-between items-center rounded-[20px]  ">
               <Image
                 src="/assets/long-term-wealth.png"
                 alt="Your Image Alt Text"
-                className="rounded-md  h-[200px] transition-all flex  duration-300 hover:scale-105"
+                className="rounded-md h-[185px] transition-transform duration-300 flex items-center justify-center hover:scale-101"
                 width={450}
                 height={1}
               />
@@ -420,13 +420,13 @@ const Page = () => {
                     7+ years recommended duration
                   </p>
                 </div>
-                <div className="flex gap-2 items-center mt-4">
+                <div className="flex gap-2 items-center mt-2">
                   <PiShootingStarThin />
 
                   <p className="  font-light">No lock-in</p>
                 </div>
               </div>
-              <div className=" flex justify-center items-center w-full pb-10">
+              <div className=" flex justify-center items-center w-full pb-6">
                 <button className="w-[80%] flex justify-center items-center gap-3 py-2   font-medium text-white  bg-primary rounded-md shadow active:bg-primary focus:outline-none ease transition-all hover:shadow-lg hover:-translate-y-1 duration-300">
                   Explore
                   <GoArrowRight size={20} />
