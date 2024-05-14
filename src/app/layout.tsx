@@ -18,7 +18,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <ConditionalWrapper routeName="/login">{children}</ConditionalWrapper>
+        <ConditionalWrapper routeName={["/signup", "/signin", "/verify"]}>
+          {children}</ConditionalWrapper>
       </body>
     </html>
   );
