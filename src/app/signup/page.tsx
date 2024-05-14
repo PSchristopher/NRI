@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { useState } from 'react';
 import { RxArrowRight, RxCross2 } from 'react-icons/rx';
 
-const page = () => {
+const SignUp = () => {
     const [isValidEmail, setIsValidEmail] = useState(false);
     const [email, setEmail] = useState('');
     const handleEmailChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -106,4 +106,4 @@ const page = () => {
     )
 }
 
-export default page
+export default SignUp

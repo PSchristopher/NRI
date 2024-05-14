@@ -1,7 +1,7 @@
 import GoogleAuthButton from '@/components/googleAuthButton'
 import React from 'react'
 
-const page = () => {
+const SignIn = () => {
     return (
         <>
             <div className='w-100% flex'>
@@ -109,4 +109,4 @@ const page = () => {
     )
 }
 
-export default page
+export default SignIn
