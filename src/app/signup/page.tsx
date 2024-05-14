@@ -1,7 +1,8 @@
 "use client";
+import React from 'react';
 import GoogleAuthButton from '@/components/googleAuthButton'
 import Link from 'next/link';
-import React, { useState } from 'react'
+import { useState } from 'react';
 import { RxArrowRight, RxCross2 } from 'react-icons/rx';
 
 const page = () => {
