@@ -1,4 +1,4 @@
-'use client'
+"use client";
 import GoogleAuthButton from '@/components/googleAuthButton'
 import Link from 'next/link';
 import React, { useState } from 'react'
