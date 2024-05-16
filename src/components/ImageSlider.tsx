@@ -14,7 +14,6 @@ import { FaChevronLeft } from "react-icons/fa6";
 import { FaChevronRight } from "react-icons/fa6";
 const ImageSlider = () => {
   const swiperRef = useRef<any>(null);
-  const swiperRef2 = useRef<any>(null);
 
   const handlePrevClick = () => {
     if (swiperRef.current && swiperRef.current.swiper) {
@@ -25,17 +24,6 @@ const ImageSlider = () => {
   const handleNextClick = () => {
     if (swiperRef.current && swiperRef.current.swiper) {
       swiperRef.current.swiper.slideNext();
-    }
-  };
-  const handlePrevClick2 = () => {
-    if (swiperRef2.current && swiperRef2.current.swiper) {
-      swiperRef2.current.swiper.slidePrev();
-    }
-  };
-
-  const handleNextClick2 = () => {
-    if (swiperRef2.current && swiperRef2.current.swiper) {
-      swiperRef2.current.swiper.slideNext();
     }
   };
 
