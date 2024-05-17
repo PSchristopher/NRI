@@ -49,7 +49,7 @@ const Header = () => {
               FAQ
             </Link>
             <Link
-              href={"/blog"}
+              href={"/"}
               className="cursor-pointer hover:text-gray-900 font-graphik"
             >
               Blog
