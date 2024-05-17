@@ -112,29 +112,29 @@ const Page = () => {
           href={"https://www.mutualfundssahihai.com/en/amfi"}
           target="_blank"
         >
-          <button className="border-2 mb-32 border-gray-100 px-4 py-4 bg-secondary flex gap-4 justify-between rounded-lg items-center mt-6 drop-shadow-md mx-4 md:mx-20 xl:mx-auto">
-            <Image
-              src={"/assets/images.png"}
-              alt="cots"
-              className="w-[40px]"
-              width={500}
-              height={1}
-            />
-            <p className="text-center text-[10px]">
-              NRI is a certified Mutual Fund distributor registered with
-              Association of Mutual Funds in India (AMFI) with Reg. No. 000000
-            </p>
-            <GoArrowUpRight
-              size={100}
-              color="#008000"
-              className="block md:hidden"
-            />
-            <GoArrowUpRight
-              size={25}
-              color="#008000"
-              className="hidden md:block"
-            />
-          </button>
+            <button className="border-2 mb-32 border-gray-100 px-2 py-2 bg-secondary flex gap-4 justify-between rounded-lg items-center mt-6 drop-shadow-md mx-4 md:mx-20 xl:mx-auto">
+              <Image
+                src={"/assets/images.png"}
+                alt="cots"
+                className="w-[35px]"
+                width={400}
+                height={1}
+              />
+              <p className="text-center text-[12px]">
+                NRI is a certified Mutual Fund distributor registered with
+                Association of Mutual Funds in India (AMFI) with Reg. No. 000000
+              </p>
+              <GoArrowUpRight
+                size={100}
+                color="#008000"
+                className="block md:hidden"
+              />
+              <GoArrowUpRight
+                size={25}
+                color="#008000"
+                className="hidden md:block"
+              />
+            </button>
         </Link>
       </section>
 
