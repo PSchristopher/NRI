@@ -6,7 +6,7 @@ import {
   FaCanadianMapleLeaf,
   FaArrowRight,
 } from "react-icons/fa";
-import { PiShootingStarThin } from "react-icons/pi";
+import { PiBankBold, PiBankLight, PiChartLineUp, PiShootingStarThin } from "react-icons/pi";
 import { AiOutlineCloudUpload } from "react-icons/ai";
 import { HiArrowPath } from "react-icons/hi2";
 import { GoArrowRight, GoArrowUpRight } from "react-icons/go";
@@ -16,10 +16,8 @@ import Image from "next/image";
 import FAQ from "@/components/FAQ";
 import ImageSlider from "@/components/ImageSlider";
 import Link from "next/link";
-import hand from '../../public/assets/hand.png'
-import bar from '../../public/assets/bar.png'
-import bank from '../../public/assets/bank.png'
-import pad from '../../public/assets/pad.png'
+import { FaHandHoldingDollar } from "react-icons/fa6";
+import { LuFileType } from "react-icons/lu";
 const Page = () => {
   const [index, setIndex] = useState(0);
   const [expandIndex, setExpand] = useState(6);
@@ -37,25 +35,29 @@ const Page = () => {
       name: "Invest reliably with index funds",
       description:
         "Invest reliably with index funds: Build wealth over time by subscribing to our curated portfolio of equity & debt instruments. Relax and focus on other important things in life",
-      icon: hand,
+      icon: FaHandHoldingDollar,
     },
     {
       name: "Earn high returns with India’s growth",
       description:
         "Earn high returns with India’s growth: With its young talent and growing urban class, India is poised to be one of the fastest growing economies in the next decade. We offer a seamless way for this growth to reflect in your asset portfolio.",
-      icon: bar,
+      icon: PiChartLineUp
+      ,
     },
     {
       name: "Faster account opening processes with trusted banks",
       description:
         "Faster account opening processes with trusted banks:** Invest with us and open a NRE/NRO bank account with top banks like ICICI, Axis, Yes in few days. No more waiting for weeks just to get started.",
-      icon: bank,
+      icon: PiBankBold
+
+      ,
     },
     {
       name: "Complimentary tax guidance",
       description:
         "Complimentary tax guidance: Investing in a foreign market can be complicated, especially when it comes to taxation. Use our simple and tax-compliant platform to invest with confidence.",
-      icon: pad,
+      icon: LuFileType
+      ,
     },
   ];
   const options = "How secure is this?";
@@ -161,8 +163,12 @@ const Page = () => {
                 {features.map((feature, index) => (
                   <div key={feature.name} className="relative pl-16">
                     <dt className="text-base font-semibold leading-5 text-gray-900">
-                      <div className="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg  cursor-pointer transition-all hover:shadow-lg hover:-translate-y-1 duration-300">
-                      <Image src={feature.icon} alt={feature.name} className="h-10 w-10 text-white" aria-hidden="true" />
+                      <div className="absolute left-0 top-0 flex h-10 w-10 items-center  bg-primary justify-center rounded-lg  cursor-pointer transition-all hover:shadow-lg hover:-translate-y-1 duration-300">
+                      {/* <Image src={feature.icon} alt={feature.name} className="h-10 w-10 text-white" aria-hidden="true" /> */}
+                      < feature.icon
+                          className="h-6 w-6 text-white"
+                          aria-hidden="true"
+                        />
                       </div>
                       {feature.name}
                     </dt>
