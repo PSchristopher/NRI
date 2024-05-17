@@ -16,6 +16,10 @@ import Image from "next/image";
 import FAQ from "@/components/FAQ";
 import ImageSlider from "@/components/ImageSlider";
 import Link from "next/link";
+import hand from '../../public/assets/hand.png'
+import bar from '../../public/assets/bar.png'
+import bank from '../../public/assets/bank.png'
+import pad from '../../public/assets/pad.png'
 const Page = () => {
   const [index, setIndex] = useState(0);
   const [expandIndex, setExpand] = useState(6);
@@ -33,25 +37,25 @@ const Page = () => {
       name: "Invest reliably with index funds",
       description:
         "Invest reliably with index funds: Build wealth over time by subscribing to our curated portfolio of equity & debt instruments. Relax and focus on other important things in life",
-      icon: AiOutlineCloudUpload,
+      icon: hand,
     },
     {
       name: "Earn high returns with India’s growth",
       description:
         "Earn high returns with India’s growth: With its young talent and growing urban class, India is poised to be one of the fastest growing economies in the next decade. We offer a seamless way for this growth to reflect in your asset portfolio.",
-      icon: IoLockClosedOutline,
+      icon: bar,
     },
     {
       name: "Faster account opening processes with trusted banks",
       description:
         "Faster account opening processes with trusted banks:** Invest with us and open a NRE/NRO bank account with top banks like ICICI, Axis, Yes in few days. No more waiting for weeks just to get started.",
-      icon: HiArrowPath,
+      icon: bank,
     },
     {
       name: "Complimentary tax guidance",
       description:
         "Complimentary tax guidance: Investing in a foreign market can be complicated, especially when it comes to taxation. Use our simple and tax-compliant platform to invest with confidence.",
-      icon: FaFingerprint,
+      icon: pad,
     },
   ];
   const options = "How secure is this?";
@@ -157,11 +161,8 @@ const Page = () => {
                 {features.map((feature, index) => (
                   <div key={feature.name} className="relative pl-16">
                     <dt className="text-base font-semibold leading-5 text-gray-900">
-                      <div className="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg bg-primary cursor-pointer transition-all hover:shadow-lg hover:-translate-y-1 duration-300">
-                        <feature.icon
-                          className="h-6 w-6 text-white"
-                          aria-hidden="true"
-                        />
+                      <div className="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg  cursor-pointer transition-all hover:shadow-lg hover:-translate-y-1 duration-300">
+                      <Image src={feature.icon} alt={feature.name} className="h-10 w-10 text-white" aria-hidden="true" />
                       </div>
                       {feature.name}
                     </dt>
@@ -837,17 +838,17 @@ const Page = () => {
 
         <div className="max-w-4xl grid grid-cols-1 md:grid-cols-2 gap-14 mx-auto mt-10">
           <div className="w-full bg-white drop-shadow-lg rounded-[20px]">
-            <div className="pl-8 pr-4 pt-10">
+            <div className="flex justify-between pl-8 pr-4 pt-10">
+              <p className="text-2xl font-medium mt-2">Taxation</p>
               <Image
                 src="/assets/tax.png"
                 alt="Your Image Alt Text"
-                className="w-[50px]"
+                className="w-[50px] "
                 width={500}
                 height={1}
               />
-              <p className="text-2xl font-medium mt-2">Taxation</p>
             </div>
-            <div className="pt-8 pl-8 pr-20 pb-12">
+            <div className=" pl-8 pr-20 pb-12">
               <div className="flex items-start mt-4 relative">
                 <div className="w-10 absolute left-0">
                   <FaCanadianMapleLeaf size={20} color="gray" />
@@ -906,7 +907,8 @@ const Page = () => {
             </div>
           </div>
           <div className="w-full bg-white drop-shadow-lg rounded-[20px]">
-            <div className="pl-8 pr-4 pt-10">
+            <div className="flex justify-between pl-8 pr-4 pt-10">
+              <p className="text-2xl font-medium mt-2">Documentation</p>
               <Image
                 src="/assets/doc.png"
                 alt="Your Image Alt Text"
@@ -914,10 +916,9 @@ const Page = () => {
                 width={500}
                 height={1}
               />
-              <p className="text-2xl font-medium mt-2">Documentation</p>
             </div>
 
-            <div className="pt-8 pl-8 pr-20 pb-12">
+            <div className=" pl-8 pr-20 pb-12">
               <div className="flex items-start mt-4 relative">
                 <div className="w-10 absolute left-0">
                   <FaCanadianMapleLeaf size={20} color="gray" />
