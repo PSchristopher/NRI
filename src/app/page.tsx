@@ -120,7 +120,7 @@ const Page = () => {
               width={500}
               height={1}
             />
-            <p className="text-center">
+            <p className="text-center text-[10px]">
               NRI is a certified Mutual Fund distributor registered with
               Association of Mutual Funds in India (AMFI) with Reg. No. 000000
             </p>
