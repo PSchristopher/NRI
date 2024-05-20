@@ -819,7 +819,7 @@ const Page = () => {
                 <Image
                   src="/assets/ICICI_LOGO2.png"
                   alt="Your Image Alt Text"
-                  className="w-[180px]"
+                  className="w-[180px] pb-[30px]"
                   width={500}
                   height={1}
                 />
@@ -851,12 +851,21 @@ const Page = () => {
 
         <div className="max-w-4xl grid grid-cols-1 md:grid-cols-2 gap-14 mx-auto mt-10">
           <div className="w-full bg-white drop-shadow-lg rounded-[20px]">
-            <div className="flex justify-between pl-8 pr-4 pt-10">
-              <p className="text-2xl font-medium mt-2">Taxation</p>
+            <div className="flex flex-col md:flex-row items-center md:justify-between pl-8 pr-4 pt-10">
+            <Image
+                src="/assets/tax.png"
+                alt="Your Image Alt Text"
+                className=" md:hidden w-[100px] flex items-center"
+                width={400}
+                height={1}
+              />
+              <div className="flex justify-start">
+              <p className="text-2xl font-medium mt-2 ">Taxation</p>
+              </div>
               <Image
                 src="/assets/tax.png"
                 alt="Your Image Alt Text"
-                className="w-[50px] "
+                className="hidden md:block md:w-[50px] "
                 width={500}
                 height={1}
               />
@@ -920,15 +929,25 @@ const Page = () => {
             </div>
           </div>
           <div className="w-full bg-white drop-shadow-lg rounded-[20px]">
-            <div className="flex justify-between pl-8 pr-4 pt-10">
+            <div className="flex flex-col md:flex-row items-center md:justify-between pl-8 pr-4 pt-10">
+            <Image
+                src="/assets/doc.png"
+                alt="Your Image Alt Text"
+                className=" md:hidden w-[100px] flex items-center"
+                width={400}
+                height={1}
+              />
+              <div className="flex justify-start">
               <p className="text-2xl font-medium mt-2">Documentation</p>
+              </div>
               <Image
                 src="/assets/doc.png"
                 alt="Your Image Alt Text"
-                className="w-[50px]"
+                className="hidden md:block md:w-[50px] "
                 width={500}
                 height={1}
               />
+              
             </div>
 
             <div className=" pl-8 pr-20 pb-12">
@@ -1008,12 +1027,13 @@ const Page = () => {
         <div className="py-14 md:py-24">
           <ImageSlider />
         </div>
-        <div className="flex justify-center">
-          <button className="bg-primary text-white px-16 py-2 rounded-lg cursor-pointer transition-all hover:shadow-lg hover:-translate-y-1 duration-300">
+        <div className="flex justify-center ">
+          <button className="bg-primary hidden md:block text-white px-16 py-2 rounded-lg cursor-pointer transition-all hover:shadow-lg hover:-translate-y-1 duration-300">
             View All
           </button>
         </div>
       </section>
+      
       {/* {section 8} */}
       <section className=" px-4 md:px-20 lg:px-40 bg-secondary py-14 md:py-24">
         <div className="w-full flex flex-col justify-center items-center">
@@ -1028,23 +1048,25 @@ const Page = () => {
         </div>
 
         <div className="flex flex-wrap  gap-4 md:gap-0  justify-between my-20 items-start">
-          <div className="w-full md:w-[20%] flex flex-col gap-4 justify-center items-center">
+          <div className="w-full md:w-[20%] flex sm:flex-row md:flex-col gap-4 justify-center items-center">
             <Image
               src="/assets/dollar.png"
               alt="Your Image Alt Text"
-              className="w-[60%] lg:w-[73%] transition-all duration-300 hover:scale-105"
+              className="w-[30%] lg:w-[73%] transition-all duration-300 hover:scale-105"
               width={500}
               height={1}
             />
+            <div className="flex justify-center items-center flex-col gap-3">
             <p className="font-semibold mt-4 text-center">
               From your Foreign Bank{" "}
             </p>
             <p className="text-sm font-light text-center leading-6 w-2/3 md:w-full">
               Convert to INR through your preferred remittance partner
             </p>
+            </div>
           </div>
-          <div className="w-full md:w-[20%] flex flex-col md:flex-row  gap-2  justify-between items-center mt-0 md:mt-6 lg:mt-12">
-            <div className="border-gray-700 border-2 w-1 h-[100px] md:h-1 md:w-[35%] border-dashed" />
+          <div className="w-[30%]  md:w-[20%] flex flex-col md:flex-row  gap-2  justify-between items-center mt-0 md:mt-6 lg:mt-12">
+            <div className="border-gray-700 border-2 w-1 h-[50px] md:h-1 md:w-[35%] border-dashed" />
             <Image
               src="/assets/lock.png"
               alt="Your Image Alt Text"
@@ -1052,23 +1074,26 @@ const Page = () => {
               width={500}
               height={1}
             />
-            <div className="border-gray-700 border-2 w-1 h-[100px] md:h-1 md:w-[35%] border-dashed" />
+            <div className="border-gray-700 border-2 w-1 h-[50px] md:h-1 md:w-[35%] border-dashed" />
           </div>
-          <div className="w-full md:w-[20%] flex flex-col gap-4 justify-center items-center">
+          <div className="w-full md:w-[20%] flex sm:flex-row md:flex-col gap-4 justify-center items-center">
             <Image
               src="/assets/currency.png"
               alt="Your Image Alt Text"
-              className=" w-1/2 lg:w-2/3 transition-all duration-300 hover:scale-105"
+              className=" w-[28%] lg:w-[60%] transition-all duration-300 hover:scale-105"
               width={500}
               height={1}
             />
+            <div className=" flex justify-center items-center flex-col gap-3">
+
             <p className="font-semibold mt-4 text-center">To NRE/NRO Account</p>
             <p className="text-sm font-light text-center leading-6 w-2/3 md:w-full">
               Integrate bank account and pay through net-banking
             </p>
+            </div>
           </div>
-          <div className="w-full md:w-[20%] flex flex-col md:flex-row  gap-2  justify-between items-center mt-0 md:mt-6 lg:mt-12">
-            <div className="border-gray-700 border-2 w-1 h-[100px] md:h-1 md:w-[35%] border-dashed" />
+          <div className="w-[30%] md:w-[20%] flex flex-col md:flex-row  gap-2  justify-between items-center mt-0 md:mt-6 lg:mt-12">
+            <div className="border-gray-700 border-2 w-1 h-[50px] md:h-1 md:w-[35%] border-dashed" />
             <Image
               src="/assets/shield.png"
               alt="Your Image Alt Text"
@@ -1076,22 +1101,24 @@ const Page = () => {
               width={500}
               height={1}
             />
-            <div className="border-gray-700 border-2 w-1 h-[100px] md:h-1 md:w-[35%] border-dashed" />
+            <div className="border-gray-700 border-2 w-1 h-[50px] md:h-1 md:w-[35%] border-dashed" />
           </div>
-          <div className="w-full md:w-[20%] flex flex-col gap-4 justify-center items-center">
+          <div className="w-full md:w-[20%] flex sm:flex-row md:flex-col gap-4 justify-center items-center">
             <Image
               src="/assets/funds.png"
               alt="Your Image Alt Text"
-              className=" w-1/2 lg:w-2/3 transition-all duration-300 hover:scale-105"
+              className=" w-[30%] lg:w-[73%] transition-all duration-300 hover:scale-105"
               width={500}
               height={1}
             />
+            <div className="flex justify-center items-center flex-col gap-3">
             <p className="font-semibold mt-[35px] text-center">
               To Mutual Funds
             </p>
             <p className="text-sm font-light text-center leading-6 w-2/3 md:w-full">
               Invest directly in your selected mutual funds
             </p>
+          </div>
           </div>
         </div>
       </section>
@@ -1268,7 +1295,7 @@ const Page = () => {
           className="bg-cover bg-center bg-no-repeat rounded-[30px] drop-shadow-md"
           style={{ backgroundImage: "url('/assets/community2.png')" }}
         >
-          <div className="flex justify-center items-center">
+          <div className="flex justify-center items-center p-3">
             <div>
               <p className="text-lg  text-center max-w-[250px] text-[#111827]">
                 Join our Whatsapp community of NRI/OCIs like you

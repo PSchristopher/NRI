@@ -28,8 +28,9 @@ const ImageSlider = () => {
   };
 
   return (
+    <div>
     <div className="flex gap-4 md:gap-4 items-center justify-center w-full">
-      <button className="" onClick={handlePrevClick}>
+      <button className="hidden md:block" onClick={handlePrevClick}>
         <FaChevronLeft color="#6C6C6C" size={40} />
       </button>
       <div className="max-w-[250px] sm:max-w-sm md:max-w-xl lg:max-w-[600px] bg-white">
@@ -99,9 +100,18 @@ const ImageSlider = () => {
         </Swiper>
       </div>
 
-      <button className="" onClick={handleNextClick}>
+      <button className="hidden md:block" onClick={handleNextClick}>
         <FaChevronRight color="#6C6C6C" size={40} />
       </button>
+    </div>
+    <div className="flex gap-4 justify-center pt-6">
+    <button className="md:hidden" onClick={handlePrevClick}>
+        <FaChevronLeft color="#6C6C6C" size={40} />
+      </button>
+    <button className="md:hidden" onClick={handleNextClick}>
+        <FaChevronRight color="#6C6C6C" size={40} />
+      </button>
+    </div>
     </div>
   );
 };
