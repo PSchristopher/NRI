@@ -18,6 +18,7 @@ import ImageSlider from "@/components/ImageSlider";
 import Link from "next/link";
 import { FaHandHoldingDollar } from "react-icons/fa6";
 import { LuFileType } from "react-icons/lu";
+
 const Page = () => {
   const [index, setIndex] = useState(0);
   const [expandIndex, setExpand] = useState(6);
@@ -69,7 +70,7 @@ const Page = () => {
   const details =
     "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.";
   return (
-    <div className="max-w-screen-2xl mx-auto  font-graphik">
+    <div className="max-w-screen-2xl mx-auto ">
       {/* sectin 1 */}
       {/* <Image
         src="/assets/circle.png"
@@ -78,8 +79,8 @@ const Page = () => {
         width={500}
         height={1}
       /> */}
-      <section className="flex-col px-2 pt-16">
-        <div className="flex justify-center align-middle pt-20">
+      <section className="flex-col px-2 py-14 md:py-24 ">
+        <div className="flex justify-center align-middle ">
           <div className="relative text-center max-w-3xl lg:max-w-4xl">
             <svg
               aria-hidden="true"
@@ -101,7 +102,7 @@ const Page = () => {
           </div>
         </div>
 
-        <div className="flex justify-center mt-10 gap-2 mb-16">
+        <div className="flex justify-center mt-10 gap-2 ">
           <button className=" flex gap-2  items-center bg-primary text-white px-8 py-2 rounded-lg cursor-pointer transition-all hover:shadow-lg hover:-translate-y-1 duration-300">
             {" "}
             <span> Schedule a Meeting </span>
@@ -117,8 +118,9 @@ const Page = () => {
         <Link
           href={"https://www.mutualfundssahihai.com/en/amfi"}
           target="_blank"
+          className="flex justify-center items-center"
         >
-            <button className="border-2 mb-32 border-gray-100 px-2 py-2 bg-secondary flex gap-4 justify-between rounded-lg items-center mt-6 drop-shadow-md mx-4 md:mx-20 xl:mx-auto">
+            <button className="border-2  border-gray-100 px-2 py-2 bg-secondary flex gap-4 justify-between rounded-lg items-center mt-6 drop-shadow-md mx-4 md:mx-20 xl:mx-auto">
               <Image
                 src={"/assets/images.png"}
                 alt="cots"
@@ -145,11 +147,11 @@ const Page = () => {
       </section>
 
       {/* section 2 */}
-      <section className="px-4 md:px-20 lg:px-40 mt-10 bg-secondary">
-        <div className="py-24 sm:py-32">
+      <section className="px-4 md:px-20 lg:px-40 py-14 md:py-24 bg-secondary">
+        <div className="">
           <div className="mx-auto max-w-7xl">
             <div className="mx-auto max-w-2xl text-center">
-              <h2 className="mt-2 font-bold tracking-tight text-gray-900">
+              <h2 className="mt-2 font-medium tracking-tight text-gray-900">
                 A one-stop <span className="text-primary">Indian</span> Expats
               </h2>
               <p className="mt-1 text-sm text-gray-600">
@@ -162,7 +164,7 @@ const Page = () => {
               <dl className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-10 lg:max-w-none lg:grid-cols-2 lg:gap-y-16">
                 {features.map((feature, index) => (
                   <div key={feature.name} className="relative pl-16">
-                    <dt className="text-base font-semibold leading-5 text-gray-900">
+                    <dt className="text-base font-medium leading-5 text-gray-900">
                       <div className="absolute left-0 top-0 flex h-10 w-10 items-center  bg-primary justify-center rounded-lg  cursor-pointer transition-all hover:shadow-lg hover:-translate-y-1 duration-300">
                       {/* <Image src={feature.icon} alt={feature.name} className="h-10 w-10 text-white" aria-hidden="true" /> */}
                       < feature.icon
@@ -190,9 +192,9 @@ const Page = () => {
       </section>
 
       {/* section 4 */}
-      <section className=" px-4 md:px-20 lg:px-40 mt-24">
+      <section className=" px-4 md:px-20 lg:px-40 py-14 md:py-24 ">
         <div className="w-full lg:w-1/2">
-          <h2 className="text-gray-800 mx-auto  font-semibold font-graphik leading-[40px]">
+          <h2 className="text-gray-800 mx-auto  font-medium  leading-[40px]">
             Product <span className="text-primary">We offer</span>
           </h2>
           <p className="text-sm font-light mt-1">
@@ -244,20 +246,20 @@ const Page = () => {
                       <p className="text-sm font-light">No lock-in</p>
                     </div>
                   </div>
-                  <div className=" flex justify-center items-center w-full pb-10">
+                  {/* <div className=" flex justify-center items-center w-full pb-10">
                     <button className="w-[80%] flex justify-center items-center gap-3 py-2 text-sm font-medium text-white  bg-primary rounded-md shadow active:bg-primary focus:outline-none ease transition-all hover:shadow-lg hover:-translate-y-1 duration-300">
                       Explore
                       <GoArrowRight size={20} />
                     </button>
-                  </div>
+                  </div> */}
                 </div>
               </div>
             ) : (
               <div
                 // className=`flex gap-10 w-full indexbg-[#F2F8F2] items-center px-8 py-4 rounded-lg drop-shadow-sm`
-                className={`flex gap-10 w-full ${
+                className={`flex gap-6 ${
                   index === 0 ? "bg-[#F2F8F2]" : "bg-[#F7F6F4]"
-                } items-center px-8 py-4 rounded-lg ${
+                } items-center  w-90%  px-4 mx-2 py-4 rounded-lg ${
                   index === 0 ? "drop-shadow-sm" : "drop-shadow-lg"
                 }`}
                 onClick={() => {
@@ -272,7 +274,7 @@ const Page = () => {
                   height={1}
                 />
                 <div className="">
-                  <p className="text-xl font-medium">Mutual Funds</p>
+                  <p className=" font-medium">Mutual Funds</p>
                   <p className="mt-2 font-light">
                     Diversified portfolio for long-term growth.
                   </p>
@@ -320,19 +322,21 @@ const Page = () => {
                       <p className="text-sm font-light">No lock-in</p>
                     </div>
                   </div>
-                  <div className=" flex justify-center items-center w-full pb-10">
+                  {/* <div className=" flex justify-center items-center w-full pb-10">
                     <button className="w-[80%] flex justify-center items-center gap-3 py-2 text-sm font-medium text-white  bg-primary rounded-md shadow active:bg-primary focus:outline-none ease transition-all hover:shadow-lg hover:-translate-y-1 duration-300">
                       Explore
                       <GoArrowRight size={20} />
                     </button>
-                  </div>
+                  </div> */}
                 </div>
               </div>
             ) : (
+              
               <div
-                className={`flex gap-10 w-full ${
+                // className=`flex gap-10 w-full indexbg-[#F2F8F2] items-center px-8 py-4 rounded-lg drop-shadow-sm`
+                className={`flex gap-6 ${
                   index === 1 ? "bg-[#F2F8F2]" : "bg-[#F7F6F4]"
-                } items-center px-8 py-4 rounded-lg ${
+                } items-center  w-90%  px-4 mx-3 py-4 rounded-lg ${
                   index === 1 ? "drop-shadow-sm" : "drop-shadow-lg"
                 }`}
                 onClick={() => {
@@ -347,7 +351,7 @@ const Page = () => {
                   height={1}
                 />
                 <div className="">
-                  <p className="text-xl font-medium">Fixed Deposits</p>
+                  <p className=" font-medium">Fixed Deposits</p>
                   <p className="mt-2 font-light">
                     Diversified portfolio for long-term growth.
                   </p>
@@ -397,21 +401,22 @@ const Page = () => {
                       <p className="text-sm font-light">No lock-in</p>
                     </div>
                   </div>
-                  <div className=" flex justify-center items-center w-full pb-10">
+                  {/* <div className=" flex justify-center items-center w-full pb-10">
                     <button className="w-[80%] flex justify-center items-center gap-3 py-2 text-sm font-medium text-white  bg-primary rounded-md shadow active:bg-primary focus:outline-none ease transition-all hover:shadow-lg hover:-translate-y-1 duration-300">
                       Explore
                       <GoArrowRight size={20} />
                     </button>
-                  </div>
+                  </div> */}
                 </div>
               </div>
             ) : (
               <div
-                className={`flex gap-10 w-full ${
-                  index === 2 ? "bg-[#F2F8F2]" : "bg-[#F7F6F4]"
-                } items-center px-8 py-4 rounded-lg ${
-                  index === 2 ? "drop-shadow-sm" : "drop-shadow-lg"
-                }`}
+              // className=`flex gap-10 w-full indexbg-[#F2F8F2] items-center px-8 py-4 rounded-lg drop-shadow-sm`
+              className={`flex gap-6 ${
+                index === 2 ? "bg-[#F2F8F2]" : "bg-[#F7F6F4]"
+              } items-center  w-90%  px-4 mx-3 py-4 rounded-lg ${
+                index === 2 ? "drop-shadow-sm" : "drop-shadow-lg"
+              }`}
                 onClick={() => {
                   setExpand(2);
                 }}
@@ -472,19 +477,20 @@ const Page = () => {
                       <p className="text-sm font-light">No lock-in</p>
                     </div>
                   </div>
-                  <div className=" flex justify-center items-center w-full pb-10">
+                  {/* <div className=" flex justify-center items-center w-full pb-10">
                     <button className="w-[80%] flex justify-center items-center gap-3 py-2 text-sm font-medium text-white  bg-primary rounded-md shadow active:bg-primary focus:outline-none ease transition-all hover:shadow-lg hover:-translate-y-1 duration-300">
                       Explore
                       <GoArrowRight size={20} />
                     </button>
-                  </div>
+                  </div> */}
                 </div>
               </div>
             ) : (
               <div
-                className={`flex gap-10 w-full ${
+                // className=`flex gap-10 w-full indexbg-[#F2F8F2] items-center px-8 py-4 rounded-lg drop-shadow-sm`
+                className={`flex gap-6 ${
                   index === 3 ? "bg-[#F2F8F2]" : "bg-[#F7F6F4]"
-                } items-center px-8 py-4 rounded-lg ${
+                } items-center  w-90%  px-4 mx-3 py-4 rounded-lg ${
                   index === 3 ? "drop-shadow-sm" : "drop-shadow-lg"
                 }`}
                 onClick={() => {
@@ -547,19 +553,20 @@ const Page = () => {
                       <p className="text-sm font-light">No lock-in</p>
                     </div>
                   </div>
-                  <div className=" flex justify-center items-center w-full pb-10">
+                  {/* <div className=" flex justify-center items-center w-full pb-10">
                     <button className="w-[80%] flex justify-center items-center gap-3 py-2 text-sm font-medium text-white  bg-primary rounded-md shadow active:bg-primary focus:outline-none ease transition-all hover:shadow-lg hover:-translate-y-1 duration-300">
                       Explore
                       <GoArrowRight size={20} />
                     </button>
-                  </div>
+                  </div> */}
                 </div>
               </div>
             ) : (
               <div
-                className={`flex gap-10 w-full ${
+                // className=`flex gap-10 w-full indexbg-[#F2F8F2] items-center px-8 py-4 rounded-lg drop-shadow-sm`
+                className={`flex gap-6 ${
                   index === 4 ? "bg-[#F2F8F2]" : "bg-[#F7F6F4]"
-                } items-center px-8 py-4 rounded-lg ${
+                } items-center  w-90%  px-4 mx-3 py-4 rounded-lg ${
                   index === 4 ? "drop-shadow-sm" : "drop-shadow-lg"
                 }`}
                 onClick={() => {
@@ -740,21 +747,21 @@ const Page = () => {
                   <p className="text-sm font-light">No lock-in</p>
                 </div>
               </div>
-              <div className=" flex justify-center items-center w-full pb-6">
+              {/* <div className=" flex justify-center items-center w-full pb-6">
                 <button className="w-[80%] flex justify-center items-center gap-3 py-2 text-sm font-medium text-white  bg-primary rounded-md shadow active:bg-primary focus:outline-none ease transition-all hover:shadow-lg hover:-translate-y-1 duration-300">
                   Explore
                   <GoArrowRight size={20} />
                 </button>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>
       </section>
       {/* section 5 */}
-      <section className=" px-4 md:px-20 lg:px-40 mt-10 lg:mt-32 py-10 lg:py-32 bg-secondary">
+      <section className=" px-4 md:px-20 lg:px-40  py-14 md:py-24 lg:py-32 bg-secondary">
         <div className="grid grid-cols-1 gap-x-20 gap-y-10 mt-4 lg:grid-cols-2 items-center">
           <div className="w-full">
-            <h2 className="text-gray-800  font-semibold font-graphik leading-[40px] max-w-80">
+            <h2 className="text-gray-800  font-medium  leading-[40px] max-w-80">
               Open <span className="text-primary">NRI Bank Account </span>in
               India
             </h2>
@@ -831,9 +838,9 @@ const Page = () => {
         </div>
       </section>
       {/* section 6 */}
-      <section className="px-4 md:px-20 lg:px-40 mt-10 lg:mt-32">
+      <section className="px-4 md:px-20 lg:px-40 py-14 md:py-24">
         <div className="w-full flex flex-col justify-center items-center">
-          <h2 className="text-gray-800 mx-auto  font-semibold font-graphik leading-[40px]">
+          <h2 className="text-gray-800 mx-auto  font-medium  leading-[40px]">
             <span className="text-primary">NRI</span> Services
           </h2>
           <p className="font-light text-sm mt-1 text-center">
@@ -859,7 +866,7 @@ const Page = () => {
                 <div className="w-10 absolute left-0">
                   <FaCanadianMapleLeaf size={20} color="gray" />
                 </div>
-                <p className="font-medium text-sm text-gray-500 ml-10">
+                <p className=" text-sm text-gray-500 ml-10">
                   Personalized consultations with{" "}
                   <span className="text-black">NRI-specialized </span>
                   taxation
@@ -869,7 +876,7 @@ const Page = () => {
                 <div className="w-10 absolute left-0">
                   <PiShootingStarThin size={22} color="gray" />
                 </div>
-                <p className="font-medium text-sm text-gray-500 ml-10">
+                <p className=" text-sm text-gray-500 ml-10">
                   File ITRs hassle-free & maximize the refunds
                 </p>
               </div>
@@ -877,7 +884,7 @@ const Page = () => {
                 <div className="w-10 absolute left-0">
                   <TbAntennaBars5 size={25} color="gray" />
                 </div>
-                <p className="font-medium text-sm text-gray-500 ml-10">
+                <p className=" text-sm text-gray-500 ml-10">
                   Apply for <span className="text-black">15CA & CB</span> & Make
                   your (NRO-NRE) transfers stress-free
                 </p>
@@ -886,7 +893,7 @@ const Page = () => {
                 <div className="w-10 absolute left-0">
                   <PiShootingStarThin size={22} color="gray" />
                 </div>
-                <p className="font-medium text-sm text-gray-500 ml-10">
+                <p className=" text-sm text-gray-500 ml-10">
                   <span className="text-black">
                     {" "}
                     Apply for Lower TDS certificates
@@ -898,7 +905,7 @@ const Page = () => {
                 <div className="w-10 absolute left-0">
                   <FaCanadianMapleLeaf size={20} color="gray" />
                 </div>
-                <p className="font-medium text-sm text-black ml-10">
+                <p className=" text-sm text-black ml-10">
                   {`Received an Income Tax Notice? Don't worry, we're here to help`}
                 </p>
               </div>
@@ -906,7 +913,7 @@ const Page = () => {
                 <div className="w-10 absolute left-0">
                   <TbAntennaBars5 size={25} color="gray" />
                 </div>
-                <p className="font-medium text-sm text-gray-500 ml-10">
+                <p className=" text-sm text-gray-500 ml-10">
                   Gain More, Pay Less: Top-notch Capital Gain Tax Planning
                 </p>
               </div>
@@ -929,7 +936,7 @@ const Page = () => {
                 <div className="w-10 absolute left-0">
                   <FaCanadianMapleLeaf size={20} color="gray" />
                 </div>
-                <p className="font-medium text-sm text-gray-500 ml-10">
+                <p className=" text-sm text-gray-500 ml-10">
                   Apply for a new <span className="text-black">PAN </span>
                   digitally
                 </p>
@@ -939,7 +946,7 @@ const Page = () => {
                 <div className="w-10 absolute left-0">
                   <PiShootingStarThin size={22} color="gray" />
                 </div>
-                <p className="font-medium text-sm text-gray-500 ml-10">
+                <p className=" text-sm text-gray-500 ml-10">
                   Update/ correct &{" "}
                   <span className="text-black">Link Aadhaar</span>
                 </p>
@@ -949,7 +956,7 @@ const Page = () => {
                 <div className="w-10 absolute left-0">
                   <TbAntennaBars5 size={25} color="gray" />
                 </div>
-                <p className="font-medium text-sm text-gray-500 ml-10">
+                <p className=" text-sm text-gray-500 ml-10">
                   Reprint <span className="text-black">PAN Card</span> (Lost/
                   Damaged)
                 </p>
@@ -959,7 +966,7 @@ const Page = () => {
                 <div className="w-10 absolute left-0">
                   <PiShootingStarThin size={22} color="gray" />
                 </div>
-                <p className="font-medium text-sm text-gray-500 ml-10">
+                <p className=" text-sm text-gray-500 ml-10">
                   Quick issuance with a streamlined digital process
                 </p>
               </div>
@@ -967,7 +974,7 @@ const Page = () => {
                 <div className="w-10 absolute left-0">
                   <FaCanadianMapleLeaf size={20} color="gray" />
                 </div>
-                <p className="font-medium text-sm text-gray-500 ml-10">
+                <p className=" text-sm text-gray-500 ml-10">
                   Seamless Pan card delivery to your doorstep -{" "}
                   <span className="text-black">
                     Anywhere, Anytime, Worldwide
@@ -978,7 +985,7 @@ const Page = () => {
                 <div className="w-10 absolute left-0">
                   <TbAntennaBars5 size={25} color="gray" />
                 </div>
-                <p className="font-medium text-sm text-gray-500 ml-10">
+                <p className=" text-sm text-gray-500 ml-10">
                   For inquiries & assistance, our 24/7 chat support team is at
                   your service
                 </p>
@@ -988,9 +995,9 @@ const Page = () => {
         </div>
       </section>
       {/* {section 7} */}
-      <section className="px-4 md:px-20 lg:px-10 mt-24 py-12">
+      <section className="px-4 md:px-20 lg:px-10 py-14 md:py-24">
         <div className="w-full flex flex-col justify-center items-center">
-          <h2 className="text-gray-800 mx-auto  font-semibold font-graphik leading-[40px] text-center">
+          <h2 className="text-gray-800 mx-auto  font-medium  leading-[40px] text-center">
             What <span className="text-primary">Customers</span> have to say
           </h2>
           <p className="font-light text-sm mt-1 text-center">
@@ -998,7 +1005,7 @@ const Page = () => {
             mollis aenean sit dictum tincidunt. Ut arcu,
           </p>
         </div>
-        <div className="py-20">
+        <div className="py-14 md:py-24">
           <ImageSlider />
         </div>
         <div className="flex justify-center">
@@ -1008,9 +1015,9 @@ const Page = () => {
         </div>
       </section>
       {/* {section 8} */}
-      <section className=" px-4 md:px-20 lg:px-40 mt-24 bg-secondary py-32">
+      <section className=" px-4 md:px-20 lg:px-40 bg-secondary py-14 md:py-24">
         <div className="w-full flex flex-col justify-center items-center">
-          <h2 className="text-gray-800 mx-auto font-semibold font-graphik leading-[40px] text-center">
+          <h2 className="text-gray-800 mx-auto font-medium  leading-[40px] text-center">
             Your money will be{" "}
             <span className="text-primary">safe & secure</span>
           </h2>
@@ -1089,9 +1096,9 @@ const Page = () => {
         </div>
       </section>
       {/* {section 9} */}
-      <section className=" px-4 md:px-20 lg:px-40 mt-40">
+      <section className=" px-4 md:px-20 lg:px-40 py-14 md:py-24">
         <div className="w-full flex flex-col justify-center items-center">
-          <h2 className="text-gray-800 mx-auto  font-semibold font-graphik leading-[40px] text-center">
+          <h2 className="text-gray-800 mx-auto  font-medium  leading-[40px] text-center">
             Frequently <span className="text-primary">Asked</span> Questions
           </h2>
           <p className="font-extralight mt-1 text-sm text-center">
@@ -1121,8 +1128,8 @@ const Page = () => {
         </div>
       </section>
       {/* {section 10} */}
-      <section className="bg-secondary px-4 md:px-20 lg:px-40 py-20 mt-10">
-        <h2 className="text-gray-800 mx-auto font-semibold text-center font-graphik leading-[40px]">
+      <section className="bg-secondary px-4 md:px-20 lg:px-40 py-14 md:py-24">
+        <h2 className="text-gray-800 mx-auto font-medium text-center  leading-[40px]">
           <span className="text-primary">Resource Center</span>
         </h2>
         <p className="font-extralight mt-1 text-sm text-center">
@@ -1133,7 +1140,7 @@ const Page = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-32 gap-y-8 mt-20 items-center">
           <div>
             <p className="font-light text-sm">Mar 16, 2020</p>
-            <h2 className="text-gray-800 font-semibold leading-[40px] mt-6">
+            <h2 className="text-gray-800 font-medium leading-[40px] mt-6">
               We’re incredibly proud to announce we have secured $75m in Series
               B
             </h2>
@@ -1256,9 +1263,9 @@ const Page = () => {
           </div>
         </div>
       </section> */}
-      <section className="px-4 md:px-20 lg:px-40 mt-32  md:hidden block">
+      <section className="px-4 md:px-20 lg:px-40 py-14 md:py-24 md:hidden block">
         <div
-          className="bg-cover bg-center bg-no-repeat rounded-[30px] py-6 drop-shadow-md"
+          className="bg-cover bg-center bg-no-repeat rounded-[30px] drop-shadow-md"
           style={{ backgroundImage: "url('/assets/community2.png')" }}
         >
           <div className="flex justify-center items-center">
@@ -1274,7 +1281,7 @@ const Page = () => {
           </div>
         </div>
       </section>
-      <section className="px-4 md:px-20 lg:px-40 mt-32  hidden md:block ">
+      <section className="px-4 md:px-20 lg:px-40 py-14 md:py-24  hidden md:block ">
         <div
           className="bg-cover bg-center bg-no-repeat rounded-[30px] py-8 drop-shadow-md lg:py-16"
           style={{ backgroundImage: "url('/assets/community2.png')" }}
