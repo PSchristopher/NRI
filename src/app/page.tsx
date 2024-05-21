@@ -1041,7 +1041,7 @@ const Page = () => {
           </p>
         </div>
 
-        <div className="flex flex-wrap  gap-4 md:gap-0  justify-between  items-start">
+        <div className="flex flex-wrap  gap-4 md:gap-0 md:pt-10  justify-between  items-start">
           <div className="w-full md:w-[20%] flex sm:flex-row md:flex-col gap-4 justify-center items-center">
             <Image
               src="/assets/dollar.png"
