@@ -53,7 +53,7 @@ const ImageSlider = () => {
         >
           {[1, 2, 3, 4, 5, 6, 7, 8, 9]?.map((item, index) => (
             <SwiperSlide className=" bg-white " key={index}>
-              <div className="bg-white rounded-xl border-2 py-12 px-6 drop-shadow-xl">
+              <div className="bg-white rounded-xl border-2 py-12 px-6 ">
                 <Image
                   src={"/assets/cords.png"}
                   alt="cots"

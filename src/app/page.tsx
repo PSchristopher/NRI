@@ -103,13 +103,13 @@ const Page = () => {
         </div>
 
         <div className="flex justify-center mt-10 gap-2 ">
-          <button className=" flex gap-2  items-center bg-primary text-white px-8 py-2 rounded-lg cursor-pointer transition-all hover:shadow-lg hover:-translate-y-1 duration-300">
+          <button className=" flex gap-2  items-center bg-primary text-white px-2 md:px-8 py-2 rounded-lg cursor-pointer transition-all hover:shadow-lg hover:-translate-y-1 duration-300">
             {" "}
             <span> Schedule a Meeting </span>
             <IoCalendarNumberOutline className="text-xl" />
           </button>
           <Link href={"/login"}>
-            <button className="bg-white text-primary border-primary border px-8 py-2 rounded-lg cursor-pointer transition-all hover:shadow-lg hover:-translate-y-1 duration-300">
+            <button className="bg-white text-primary border-primary border px-2 md:px-8 py-2 rounded-lg cursor-pointer transition-all hover:shadow-lg hover:-translate-y-1 duration-300">
               {" "}
               Sign Up
             </button>
@@ -429,7 +429,7 @@ const Page = () => {
                   height={1}
                 />
                 <div className="">
-                  <p className="text-xl font-medium">Commercial Real Estate</p>
+                  <p className=" font-medium">Commercial Real Estate</p>
                   <p className="mt-2 font-light">
                     Diversified portfolio for long-term growth.
                   </p>
@@ -505,7 +505,7 @@ const Page = () => {
                   height={1}
                 />
                 <div className="">
-                  <p className="text-xl font-medium">PMS</p>
+                  <p className=" font-medium">PMS</p>
                   <p className="mt-2 font-light">
                     Diversified portfolio for long-term growth.
                   </p>
@@ -581,7 +581,7 @@ const Page = () => {
                   height={1}
                 />
                 <div className="">
-                  <p className="text-xl font-medium">Bond</p>
+                  <p className=" font-medium">Bond</p>
                   <p className="mt-2 font-light">
                     Diversified portfolio for long-term growth.
                   </p>
@@ -712,8 +712,8 @@ const Page = () => {
               </div>
             </div>
           </div>
-          <div className="w-full lg:w-[48%] bg-[#F2F8F2] px-10 rounded-[20px] py-4 hidden lg:block">
-            <div className="bg-white flex flex-col justify-between rounded-[20px] h-full">
+          <div className="w-full lg:w-[48%] bg-[#F2F8F2] px-6 rounded-[20px] py-6 hidden lg:block">
+            <div className="bg-white flex flex-col gap-4 rounded-[20px] h-full">
               <Image
                 src="/assets/long-term-wealth.png"
                 alt="Your Image Alt Text"
@@ -721,7 +721,7 @@ const Page = () => {
                 width={500}
                 height={1}
               />
-              <div className="pt-4 px-4">
+              <div className="pt-4 px-6">
                 <p className="text-2xl font-medium">{products[index]}</p>
                 <p className="mt-2 font-light text-sm">
                   A personalised mutual funds portfolio, diversified across
@@ -851,29 +851,23 @@ const Page = () => {
 
         <div className="max-w-4xl grid grid-cols-1 md:grid-cols-2 gap-14 mx-auto mt-10">
           <div className="w-full bg-white drop-shadow-lg rounded-[20px]">
-            <div className="flex flex-col md:flex-row items-center md:justify-between pl-8 pr-4 pt-10">
-            <Image
-                src="/assets/tax.png"
-                alt="Your Image Alt Text"
-                className=" md:hidden w-[100px] flex items-center"
-                width={400}
-                height={1}
-              />
+            <div className="flex flex-row items-center justify-between pl-12 pr-6 pt-10">
+            
               <div className="flex justify-start">
               <p className="text-2xl font-medium mt-2 ">Taxation</p>
               </div>
               <Image
                 src="/assets/tax.png"
                 alt="Your Image Alt Text"
-                className="hidden md:block md:w-[50px] "
+                className="w-[50px] "
                 width={500}
                 height={1}
               />
             </div>
-            <div className=" pl-8 pr-20 pb-12">
+            <div className=" pl-12 pr-20 pb-12">
               <div className="flex items-start mt-4 relative">
                 <div className="w-10 absolute left-0">
-                  <FaCanadianMapleLeaf size={20} color="gray" />
+                  <PiShootingStarThin size={20} color="gray" />
                 </div>
                 <p className=" text-sm text-gray-500 ml-10">
                   Personalized consultations with{" "}
@@ -883,7 +877,7 @@ const Page = () => {
               </div>
               <div className="flex items-start mt-4 relative">
                 <div className="w-10 absolute left-0">
-                  <PiShootingStarThin size={22} color="gray" />
+                  <TbAntennaBars5 size={22} color="gray" />
                 </div>
                 <p className=" text-sm text-gray-500 ml-10">
                   File ITRs hassle-free & maximize the refunds
@@ -891,7 +885,7 @@ const Page = () => {
               </div>
               <div className="flex items-start mt-4 relative">
                 <div className="w-10 absolute left-0">
-                  <TbAntennaBars5 size={25} color="gray" />
+                  <PiShootingStarThin size={25} color="gray" />
                 </div>
                 <p className=" text-sm text-gray-500 ml-10">
                   Apply for <span className="text-black">15CA & CB</span> & Make
@@ -900,7 +894,7 @@ const Page = () => {
               </div>
               <div className="flex items-start mt-4 relative">
                 <div className="w-10 absolute left-0">
-                  <PiShootingStarThin size={22} color="gray" />
+                  <TbAntennaBars5 size={22} color="gray" />
                 </div>
                 <p className=" text-sm text-gray-500 ml-10">
                   <span className="text-black">
@@ -912,7 +906,7 @@ const Page = () => {
               </div>
               <div className="flex items-start mt-4 relative">
                 <div className="w-10 absolute left-0">
-                  <FaCanadianMapleLeaf size={20} color="gray" />
+                  <PiShootingStarThin size={20} color="gray" />
                 </div>
                 <p className=" text-sm text-black ml-10">
                   {`Received an Income Tax Notice? Don't worry, we're here to help`}
@@ -929,31 +923,31 @@ const Page = () => {
             </div>
           </div>
           <div className="w-full bg-white drop-shadow-lg rounded-[20px]">
-            <div className="flex flex-col md:flex-row items-center md:justify-between pl-8 pr-4 pt-10">
-            <Image
+            <div className="flex flex-row items-center justify-between pl-12 pr-6 pt-10">
+            {/* <Image
                 src="/assets/doc.png"
                 alt="Your Image Alt Text"
                 className=" md:hidden w-[100px] flex items-center"
                 width={400}
                 height={1}
-              />
+              /> */}
               <div className="flex justify-start">
               <p className="text-2xl font-medium mt-2">Documentation</p>
               </div>
               <Image
                 src="/assets/doc.png"
                 alt="Your Image Alt Text"
-                className="hidden md:block md:w-[50px] "
+                className="w-[50px] "
                 width={500}
                 height={1}
               />
               
             </div>
 
-            <div className=" pl-8 pr-20 pb-12">
+            <div className=" pl-12 pr-20 pb-12">
               <div className="flex items-start mt-4 relative">
                 <div className="w-10 absolute left-0">
-                  <FaCanadianMapleLeaf size={20} color="gray" />
+                  <PiShootingStarThin size={20} color="gray" />
                 </div>
                 <p className=" text-sm text-gray-500 ml-10">
                   Apply for a new <span className="text-black">PAN </span>
@@ -963,7 +957,7 @@ const Page = () => {
               </div>
               <div className="flex items-start mt-8 relative">
                 <div className="w-10 absolute left-0">
-                  <PiShootingStarThin size={22} color="gray" />
+                  <TbAntennaBars5 size={22} color="gray" />
                 </div>
                 <p className=" text-sm text-gray-500 ml-10">
                   Update/ correct &{" "}
@@ -973,7 +967,7 @@ const Page = () => {
               </div>
               <div className="flex items-start mt-8 relative">
                 <div className="w-10 absolute left-0">
-                  <TbAntennaBars5 size={25} color="gray" />
+                  <PiShootingStarThin size={25} color="gray" />
                 </div>
                 <p className=" text-sm text-gray-500 ml-10">
                   Reprint <span className="text-black">PAN Card</span> (Lost/
@@ -983,7 +977,7 @@ const Page = () => {
               </div>
               <div className="flex items-start mt-8 relative">
                 <div className="w-10 absolute left-0">
-                  <PiShootingStarThin size={22} color="gray" />
+                  <TbAntennaBars5 size={22} color="gray" />
                 </div>
                 <p className=" text-sm text-gray-500 ml-10">
                   Quick issuance with a streamlined digital process
@@ -991,7 +985,7 @@ const Page = () => {
               </div>
               <div className="flex items-start mt-4 relative">
                 <div className="w-10 absolute left-0">
-                  <FaCanadianMapleLeaf size={20} color="gray" />
+                  <PiShootingStarThin size={20} color="gray" />
                 </div>
                 <p className=" text-sm text-gray-500 ml-10">
                   Seamless Pan card delivery to your doorstep -{" "}
@@ -1024,14 +1018,14 @@ const Page = () => {
             mollis aenean sit dictum tincidunt. Ut arcu,
           </p>
         </div>
-        <div className="py-14 md:py-24">
+        <div className="pt-14 md:pt-24">
           <ImageSlider />
         </div>
-        <div className="flex justify-center ">
+        {/* <div className="flex justify-center ">
           <button className="bg-primary hidden md:block text-white px-16 py-2 rounded-lg cursor-pointer transition-all hover:shadow-lg hover:-translate-y-1 duration-300">
             View All
           </button>
-        </div>
+        </div> */}
       </section>
       
       {/* {section 8} */}
@@ -1047,7 +1041,7 @@ const Page = () => {
           </p>
         </div>
 
-        <div className="flex flex-wrap  gap-4 md:gap-0  justify-between my-20 items-start">
+        <div className="flex flex-wrap  gap-4 md:gap-0  justify-between  items-start">
           <div className="w-full md:w-[20%] flex sm:flex-row md:flex-col gap-4 justify-center items-center">
             <Image
               src="/assets/dollar.png"
